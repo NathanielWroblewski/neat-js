@@ -1,0 +1,38 @@
+const BUTTON_NAMES = ['left', 'drop', 'right', 'rotate']
+
+const INPUTS = 200
+const OUTPUTS = BUTTON_NAMES.length
+const MAX_NODES = 1000000
+
+const CONNECTION_MUTATION_CHANCE = 0.25
+const LINK_MUTATION_CHANCE = 2.0
+const BIAS_MUTATION_CHANCE = 0.4
+const NODE_MUTATION_CHANCE = 0.5
+const ENABLE_MUTATION_CHANCE = 0.2
+const DISABLE_MUTATION_CHANCE = 0.4
+const STEP_SIZE = 0.1
+
+const STALENESS_THRESHOLD = 15
+
+const POPULATION = 300
+const DELTA_DISJOINT = 2.0
+const DELTA_WEIGHTS = 0.4
+const DELTA_THRESHOLD = 1.0
+const STALE_SPECIES = 15
+const PERTURB_CHANCE = 0.90
+const CROSSOVER_CHANCE = 0.75
+const TIMEOUT = 20
+
+const _INPUTS = [...Array(INPUTS).keys()]
+const _OUTPUTS = [...Array(OUTPUTS).keys()].map(index => index + MAX_NODES)
+const IO = [..._INPUTS, ..._OUTPUTS]
+
+const MUTATION_CHANCE = {
+  connections: CONNECTION_MUTATION_CHANCE,
+  link: LINK_MUTATION_CHANCE,
+  bias: BIAS_MUTATION_CHANCE,
+  node: NODE_MUTATION_CHANCE,
+  enable: ENABLE_MUTATION_CHANCE,
+  disable: DISABLE_MUTATION_CHANCE,
+  step: STEP_SIZE
+}

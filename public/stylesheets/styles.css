@@ -1,0 +1,131 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.content {
+  width: 550px;
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+}
+
+.title {
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #aaa;
+}
+
+.container {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.inputs, .game, .network, .outputs {
+  height: 240px;
+}
+
+.network, .outputs {
+  background-color: #eee;
+  width: 120px;
+}
+
+.inputs div,
+.game div {
+  height: 10px;
+  width: 10px;
+  border: 1px solid #eee;
+  background-color: #eee;
+  float: left;
+}
+
+.inputs div:nth-child(10n + 1),
+.game div:nth-child(10n + 1) {
+  clear: both;
+}
+
+.block {
+  background-color: #444;
+}
+
+.block.red    { background-color: #F64747; }
+.block.orange { background-color: #EB974E; }
+.block.yellow { background-color: #F5D76E; }
+.block.blue   { background-color: #19B5FE; }
+.block.green  { background-color: #03C9A9; }
+.block.purple { background-color: #913D88; }
+.block.pink   { background-color: #D2527F; }
+.block.black  { background-color: #666; }
+.block.gray   { background-color: #aaa; }
+
+.label {
+  margin-top: 7px;
+  color: #aaa;
+  text-align: center;
+  font-style: italic;
+}
+
+.neuron {
+  height: 10px;
+  width: 10px;
+  border: 1px solid #666;
+}
+
+.output {
+  color: #aaa;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+.output.enabled-true {
+  background-color: #aaa;
+  color: #eee;
+}
+
+.neat {
+  display: inline-block;
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 240px;
+  width: 100%;
+}
+
+line {
+  stroke-width: 2px;
+  opacity: 0.3;
+}
+
+line.enabled-true {
+  fill: #03C9A9;
+  stroke: #03C9A9;
+}
+
+line.enabled-false {
+  fill: #F64747;
+  stroke: #F64747;
+}
+
+rect {
+  fill: #aaa;
+  stroke: #aaa;
+  stroke-width: 1;
+}
+
+.summary {
+  margin: 0 0 6px;
+  line-height: 1.2em;
+}
